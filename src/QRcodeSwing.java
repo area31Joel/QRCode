@@ -71,7 +71,6 @@ public class QRcodeSwing extends JFrame implements ActionListener {
         }
 
     }
-
     public static void main(String[] args) {
         new QRcodeSwing("二维码生成器");
     }

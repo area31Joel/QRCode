@@ -10,7 +10,6 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 public class QRcodeUtil {
-
     /**
      * 生成发送二维码方法
      *
