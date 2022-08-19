@@ -9,8 +9,8 @@ public class QRcodeSwing extends JFrame implements ActionListener {
     JPanel jp2 = new JPanel();
     JPanel jp3 = new JPanel();
     JLabel jl_catalog = new JLabel("保存目录");
-    JTextField jt_catalog = new JTextField("..\\QRCode", 20);
-    JTextArea jt_input = new JTextArea("仅支持英文字符，中文无法显示，最多输入600字。\n图片保存在QRCode目录中！", 20, 30);
+    JTextField jt_catalog = new JTextField(".\\", 20);
+    JTextArea jt_input = new JTextArea("仅支持英文字符，中文无法显示，最多输入600字。\n生成的二维码与“二维码生成器”在同一目录中！", 20, 30);
     JButton jb_output = new JButton("生成二维码");
     static String To_text;
     static String To_file;
@@ -37,7 +37,7 @@ public class QRcodeSwing extends JFrame implements ActionListener {
             @Override
             public void focusGained(FocusEvent e) {
                 // 获取焦点时执行此方法
-                if (jt_input.getText().equals("仅支持英文字符，中文无法显示，最多输入600字。\n图片保存在QRCode目录中！")) {
+                if (jt_input.getText().equals("仅支持英文字符，中文无法显示，最多输入600字。\n生成的二维码与“二维码生成器”在同一目录中！")) {
                     jt_input.setText("");
                 }
             }
@@ -45,7 +45,7 @@ public class QRcodeSwing extends JFrame implements ActionListener {
             public void focusLost(FocusEvent e) {
                 // 失去焦点时执行此方法
                 if (jt_input.getText().equals("")) {
-                    jt_input.setText("仅支持英文字符，中文无法显示，最多输入600字。\n图片保存在QRCode目录中！");
+                    jt_input.setText("仅支持英文字符，中文无法显示，最多输入600字。\n生成的二维码与“二维码生成器”在同一目录中！");
                 }
             }
         });
