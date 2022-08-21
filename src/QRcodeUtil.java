@@ -25,7 +25,7 @@ public class QRcodeUtil {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
         //设置字符编号
         HashMap<EncodeHintType, Object> hints = new HashMap<>();
-        hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
+        hints.put(EncodeHintType.CHARACTER_SET, "utf-16");
         //生成的二维码
         BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height,hints);
         //BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);

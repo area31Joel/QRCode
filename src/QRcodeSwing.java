@@ -6,8 +6,6 @@ import java.awt.event.FocusListener;
 
 public class QRcodeSwing extends JFrame implements ActionListener {
     JPanel jp1 = new JPanel();
-    JPanel jp2 = new JPanel();
-    JPanel jp3 = new JPanel();
     JLabel jl_catalog = new JLabel("保存目录");
     JTextField jt_catalog = new JTextField(".\\", 20);
     JTextArea jt_input = new JTextArea("支持输入中英文字符。\n生成的二维码与“二维码生成器”在同一目录中！", 20, 30);
@@ -16,19 +14,14 @@ public class QRcodeSwing extends JFrame implements ActionListener {
     static String To_file;
     public QRcodeSwing(String title) {
         super(title);
-
+        jp1.add(jl_catalog);
+        jp1.add(jt_catalog);
         jp1.add(jt_input);
         jp1.add(jb_output);
 
-        jp2.add(jl_catalog);
-        jp2.add(jt_catalog);
-
-        jp3.add(jp2);
-        jp3.add(jp1);
-
         jb_output.addActionListener(this);
 
-        this.add(jp3);
+        this.add(jp1);
         this.setSize(500, 450);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
